@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.container {
+  width: 1000px;
+  margin: 20px auto;
+  padding: 0 50px;
+}
+
+header {
+  border-bottom: 1px solid black;
+  padding: 20px 0;
+}
+
+.biodata {
+  width: 250px;
+  border-right: 1px solid black;
+  padding: 10px 0;
+}
+.biodata ul {
+  /* background-color: yellow; */
+  position: relative;
+  padding: 0%;
+}
+.biodata ul::after {
+  content: "";
+  position: absolute;
+  width: 0.5%;
+  height: 100%;
+  background-color: #0f0f0f5c;
+  top: 5%;
+  right: 13%;
+}
+.biodata li {
+
+  margin-right: 20px;
+  padding-right: 50px;
+  text-align: right;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.biodata li div {
+  background-color: red;
+ 
+}
+
+.detail-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 100%;
+  position: relative;
+  z-index: 10;
+  display: none;
+}
+
+
+  .biodata li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    background-color: rgb(30, 18, 167);
+    width: 30px;
+    height: 30px;
+    right: 0%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+  }
+
+.biodata li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-color: rgb(167, 18, 18);
+  width: 10px;
+  height: 10px;
+  right: -11%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+}
+
+.biodata li.active::after {
+  background-color: blue;
+}
