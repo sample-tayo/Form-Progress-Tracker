@@ -3,22 +3,37 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  font-family: "poppins", sans-serif;
+  /* border: 1px dotted red; */
 }
 .container {
-  width: 1000px;
-  margin: 20px auto;
+  width: 80%;
+  /* height: 80%; */
+  /* margin: 20px auto; */
   padding: 0 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #02044a;
+  border-radius: 10px;
+  color: #fff;
+}
+
+main {
+  display: flex;
 }
 
 header {
-  border-bottom: 1px solid black;
-  padding: 20px 0;
+  border-bottom: 1px solid #494a7d;
+  padding: 20px 0 20px 40px;
 }
 
 .biodata {
   width: 250px;
-  border-right: 1px solid black;
-  padding: 10px 0;
+  border-right: 1px solid #494a7d;
+  /* padding: 10px 0; */
+  font-size: 11px;
 }
 .biodata ul {
   /* background-color: yellow; */
@@ -29,25 +44,36 @@ header {
   content: "";
   position: absolute;
   width: 0.5%;
-  height: 100%;
-  background-color: #0f0f0f5c;
+  height: 90%;
+  background-color: #494a7d;
   top: 5%;
-  right: 13%;
+  right: 15%;
 }
 .biodata li {
-
   margin-right: 20px;
   padding-right: 50px;
   text-align: right;
   position: relative;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 40px;
   z-index: 1;
 }
+.biodata li:hover {
+  cursor: pointer;
+}
+/* .biodata li div {
+  background-color: red; */
 
-.biodata li div {
-  background-color: red;
- 
+.biodata li div p:first-child {
+  font-weight: bold;
+}
+
+.biodata li div p {
+  padding-bottom: 5px;
+  color: #fff;
+}
+.biodata li div p:first-child {
+  font-weight: bold;
 }
 
 .detail-icon {
@@ -60,24 +86,38 @@ header {
   display: none;
 }
 
-
-  .biodata li::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    background-color: rgb(30, 18, 167);
-    width: 30px;
-    height: 30px;
-    right: 0%;
-    transform: translateY(-50%);
-    border-radius: 100%;
-  }
+/* .biodata li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-color: rgb(30, 18, 167);
+  width: 30px;
+  height: 30px;
+  right: 0%;
+  padding: 5px;
+  transform: translateY(-50%);
+  border-radius: 100%;
+} */
+.symbol {
+  background-color: #25cc88;
+  position: absolute;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  right: 0%;
+  padding-top: 10px;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  z-index: 2;
+  color: #fff;
+}
 
 .biodata li::after {
   content: "";
   position: absolute;
   top: 50%;
-  background-color: rgb(167, 18, 18);
+  background-color: #494a7d;
   width: 10px;
   height: 10px;
   right: -11%;
@@ -86,5 +126,120 @@ header {
 }
 
 .biodata li.active::after {
-  background-color: blue;
+  background-color: #25cc88;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  /* width: 80%; */
+  /* gap: 20px; */
+}
+
+.content {
+  display: block;
+  margin: 30px;
+  width: 500px;
+  max-width: 100%;
+  /* background-color: brown; */
+}
+.content span {
+  font-size: small;
+}
+.content p {
+  font-size: larger;
+  font-weight: bold;
+  padding: 6px 0;
+  position: relative;
+}
+
+.content-line {
+  /* position: absolute; */
+  /* display: inline-flex; */
+  width: 100%;
+  border: 0.5px solid #4a70ae;
+  margin: 20px 0;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background-color: #fff;
+}
+label {
+  margin-top: 30px;
+  display: block;
+}
+input {
+  width: 100%;
+  /* height: 35px; */
+  border-radius: 5px;
+  padding: 10px 5px;
+  border: 2px solid #494a7d;
+  color: #fff;
+  cursor: pointer;
+  background-color: #02044a;
+}
+input:hover {
+  border-color: #fff;
+}
+input:active {
+  border-color: #25cc88;
+}
+button {
+  display: block;
+  padding: 10px;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 12px;
+  cursor: pointer;
+  background-color: #494a7d;
+  border: none;
+  border-radius: 10px;
+  float: right;
+}
+button:hover {
+  background-color: #25cc88;
+}
+
+.back {
+  display: inline;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .biodata li::before {
+    /* display: none; */
+  }
+  .biodata li::after {
+    display: none;
+  }
+
+  .biodata {
+    width: 250px;
+    border: none;
+    font-size: 11px;
+  }
+  .biodata ul::after {
+    display: none;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    display: block;
+    margin: 0px;
+    width: 400px;
+    max-width: 100%;
+    /* background-color: brown; */
+  }
 }
