@@ -207,6 +207,12 @@ button:hover {
 }
 
 @media screen and (max-width: 1000px) {
+  header {
+    padding: 20px;
+  }
+  header p {
+    font-size: 12px;
+  }
   main {
     display: flex;
     flex-direction: column-reverse;
@@ -237,7 +243,7 @@ button:hover {
 @media screen and (max-width: 1000px) {
   .content {
     display: block;
-    margin: 0px;
+    margin: 30px 5px;
     width: 400px;
     max-width: 100%;
     /* background-color: brown; */
