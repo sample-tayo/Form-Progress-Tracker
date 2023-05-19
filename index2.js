@@ -60,7 +60,6 @@ nameLitag.addEventListener("click", function () {
   });
 
   const backButton = document.createElement("button");
-  // backButton.classList.add("back");
   backButton.textContent = "Back";
   contentDiv.appendChild(backButton);
 
@@ -115,6 +114,10 @@ cityLitag.addEventListener("click", function () {
     InputCity.value = "";
   });
 
+  const backButton = document.createElement("button");
+  backButton.textContent = "Back";
+  contentDiv.appendChild(backButton);
+
   const main = document.querySelector("main");
   main.appendChild(section);
 });
@@ -156,6 +159,10 @@ telephoneLitag.addEventListener("click", function () {
   const nextButton = document.createElement("button");
   nextButton.textContent = "Next page";
   contentDiv.appendChild(nextButton);
+
+  const backButton = document.createElement("button");
+  backButton.textContent = "Back";
+  contentDiv.appendChild(backButton);
 
   const main = document.querySelector("main");
   main.appendChild(section);
@@ -199,6 +206,10 @@ houseLitag.addEventListener("click", function () {
   nextButton.textContent = "Next page";
   contentDiv.appendChild(nextButton);
 
+  const backButton = document.createElement("button");
+  backButton.textContent = "Back";
+  contentDiv.appendChild(backButton);
+
   const main = document.querySelector("main");
   main.appendChild(section);
 });
@@ -241,6 +252,10 @@ countryLitag.addEventListener("click", function () {
   const submitButton = document.createElement("button");
   submitButton.textContent = "submit";
   contentDiv.appendChild(submitButton);
+
+  const backButton = document.createElement("button");
+  backButton.textContent = "Back";
+  contentDiv.appendChild(backButton);
 
   const main = document.querySelector("main");
   main.appendChild(section);
