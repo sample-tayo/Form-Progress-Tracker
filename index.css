@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "poppins", sans-serif;
+}
+
+.container {
+  width: 80%;
+  padding: 0 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #02044a;
+  border-radius: 10px;
+  color: #fff;
+}
+
+main {
+  display: flex;
+}
+
+header {
+  border-bottom: 1px solid #494a7d;
+  padding: 20px 0 20px 40px;
+}
+
+.biodata {
+  width: 250px;
+  border-right: 1px solid #494a7d;
+  font-size: 11px;
+}
+
+.biodata ul {
+  position: relative;
+  padding: 0;
+}
+
+.biodata ul::after {
+  content: "";
+  position: absolute;
+  width: 0.5%;
+  height: 90%;
+  background-color: #494a7d;
+  top: 5%;
+  right: 15%;
+}
+
+.biodata li {
+  margin-right: 20px;
+  padding-right: 50px;
+  text-align: right;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.biodata li:hover {
+  cursor: pointer;
+}
+
+.biodata li div p:first-child {
+  font-weight: bold;
+}
+
+.biodata li div p {
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+.detail-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 100%;
+  position: relative;
+  z-index: 10;
+  display: none;
+}
+
+.symbol {
+  background-color: #25cc88;
+  position: absolute;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  right: 0%;
+  padding-top: 10px;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  z-index: 2;
+  color: #fff;
+}
+
+.biodata li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-color: #494a7d;
+  width: 10px;
+  height: 10px;
+  right: -11%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+}
+
+.biodata li.active::after {
+  background-color: #25cc88;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: block;
+  margin: 30px;
+  width: 500px;
+  max-width: 100%;
+}
+
+.content span {
+  font-size: small;
+}
+
+.content p {
+  font-size: larger;
+  font-weight: bold;
+  padding: 6px 0;
+  position: relative;
+}
+
+.content-line {
+  width: 100%;
+  border: 0.5px solid #4a70ae;
+  margin: 20px 0;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background-color: #fff;
+}
+
+label {
+  margin-top: 30px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 5px;
+  border: 2px solid #494a7d;
+  color: #fff;
+  cursor: pointer;
+  background-color: #02044a;
+}
+
+input:hover {
+  border-color: #fff;
+}
+
+input:active {
+  border-color: #25cc88;
+}
+
+button {
+  display: block;
+  padding: 10px;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 12px;
+  cursor: pointer;
+  background-color: #494a7d;
+  border: none;
+  border-radius: 10px;
+  float: right;
+}
+
+button:hover {
+  background-color: #25cc88;
+}
+
+.back {
+  display: inline;
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    padding: 20px;
+  }
+
+  header p {
+    font-size: 12px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .biodata li::before {
+    display: none;
+  }
+
+  .biodata li::after {
+    display: none;
+  }
+
+  .biodata {
+    width: 250px;
+    border: none;
+    font-size: 11px;
+  }
+
+  .biodata ul::after {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    overflow: scroll;
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    display: block;
+    margin: 30px 5px;
+    width: 400px;
+    max-width: 100%;
+  }
+}
